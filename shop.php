@@ -17,20 +17,38 @@ BONUS: Gestite eventuali eccezioni che si possono verificare (es: carta di credi
 
         public $name; 
     
-        public $address;  
+        public $address; 
+        
+        private $products=[];
 
         public function __construct(string $shopName, string $shopAddress)
         {
             $this->name = $shopName;
             $this->address = $shopAddress;   
         }
+
+        public function addProduct(Product $productName) {
+            $this->products[] = $productName;
+        }
+    
+        public function getAnimals() {
+            return $this->products;
+        }
+
+
+
     }
 
     $myEshop= new Eshop('myEshop', 'via boh');
 
     $cremaViso= new BeautyProducts('crema viso', 12);
 
-    var_dump($cremaViso);
+    $mouse= new TechProducts('mouse', 20);
+
+    $myEshop->addProduct($cremaViso);
+    $myEshop->addProduct($mouse);
+
+    var_dump($myEshop);
 
 
         
