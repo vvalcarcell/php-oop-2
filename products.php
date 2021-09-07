@@ -6,6 +6,7 @@
         protected $type;
 
         protected $price;
+
     }
 
     class BeautyProducts extends Product {
