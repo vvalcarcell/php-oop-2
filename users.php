@@ -17,7 +17,7 @@
             $this->address = $address;
         }
     
-        function setCreditCard ( string $creditCard) {
+        function setCreditCard ( CreditCard $creditCard) {
             $this->creditCard= $creditCard;
         }
     
@@ -25,4 +25,21 @@
 
     class PremiumUsers extends Users {
         public $discount= 20;
+    }
+
+    class CreditCard{
+        private $nameOnTheCard;
+        private $number;
+        private $expiration;
+        private $type;
+
+        function __construct(string $name, int $number, string $date, string $type) {
+            $this-> nameOnTheCard= $name;
+            $this-> number= $number;
+            $this-> expiration= $date;
+            $this-> type = $date;
+        }
+
+
+
     }
