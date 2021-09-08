@@ -7,6 +7,9 @@
 
         protected $price;
 
+        public function getPrice(){
+            return $this-> price;
+        }
     }
 
     class BeautyProducts extends Product {

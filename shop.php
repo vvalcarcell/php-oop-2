@@ -82,14 +82,20 @@ BONUS: Gestite eventuali eccezioni che si possono verificare (es: carta di credi
     $myEshop->addUser($user2);
 
     //creo creditCard
-    $creditCard1 = new CreditCard('valentina valcarcell', 8654474745, '01/01/01', 'MasterCard');
+    $creditCard1 = new CreditCard('valentina valcarcell', '8654474745', '01/01/01', 'MasterCard');
 
+    //la assegno a user1
     $user1->setCreditCard($creditCard1);
 
+    //user1 fa un acquisto
+    $user1->buyProduct($mouse);
+
+    var_dump($user1);
 
 
 
-    var_dump($myEshop);
+
+    // var_dump($myEshop);
 
 
         
