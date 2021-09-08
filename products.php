@@ -18,7 +18,7 @@
         {
             $this->type = 'Beauty';
             $this->label = $labelProduct;
-            $this->price = $priceProduct . '€';
+            $this->price = $priceProduct;
         }
 
         public $skinType = 'normal';
@@ -35,7 +35,7 @@
         {
             $this->type = 'Tech';
             $this->label = $labelProduct;
-            $this->price = $priceProduct . '€';
+            $this->price = $priceProduct;
         }
 
         private  $battery = true;

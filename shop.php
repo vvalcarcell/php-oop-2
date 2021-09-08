@@ -72,6 +72,7 @@ BONUS: Gestite eventuali eccezioni che si possono verificare (es: carta di credi
     //creo gli utenti/clienti
     $user1= new Users('valentina', 'valcarcell', 0123);
     $user2= new Users('federica', 'palma', 3210);
+    $user3= new PremiumUsers('mariapia', 'ciccoli', 8779);
 
     //agiungo prodotti
     $myEshop->addProduct($cremaViso);
@@ -80,6 +81,7 @@ BONUS: Gestite eventuali eccezioni che si possono verificare (es: carta di credi
     //aggiungo utenti
     $myEshop->addUser($user1);
     $myEshop->addUser($user2);
+    $myEshop->addUser($user3);
 
     //creo creditCard
     $creditCard1 = new CreditCard('valentina valcarcell', '8654474745', '01/01/01', 'MasterCard');
@@ -88,9 +90,9 @@ BONUS: Gestite eventuali eccezioni che si possono verificare (es: carta di credi
     $user1->setCreditCard($creditCard1);
 
     //user1 fa un acquisto
-    $user1->buyProduct($mouse);
+    $user3->buyProduct2($cremaViso, $myEshop);
 
-    var_dump($user1);
+    var_dump($user3);
 
 
 
